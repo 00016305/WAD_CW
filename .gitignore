@@ -1,0 +1,97 @@
+# ======================
+# ASP.NET Core
+# ======================
+
+## Build results
+bin/
+obj/
+out/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Auto-generated files
+Generated_Code/
+
+## Rider/JetBrains project files
+.idea/
+
+## VS Code settings
+.vscode/
+
+## Logs
+*.log
+
+## NuGet Packages
+*.nupkg
+*.snupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+
+## ASP.NET secrets and local settings
+secrets.json
+*.swp
+appsettings.Development.json
+appsettings.Local.json
+
+# Azure Functions
+local.settings.json
+
+# Dotnet tools
+.dotnet-tools/
+
+# Entity Framework
+Migrations/
+
+# ======================
+# Angular (usually in /ClientApp or /Frontend)
+# ======================
+
+## Node modules
+ClientApp/node_modules/
+Frontend/node_modules/
+**/node_modules/
+
+## Build outputs
+ClientApp/dist/
+ClientApp/.angular/
+ClientApp/.output/
+ClientApp/tmp/
+ClientApp/build/
+
+## Angular environment settings
+ClientApp/src/environments/environment.*.ts
+
+## Logs
+ClientApp/npm-debug.log*
+ClientApp/yarn-debug.log*
+ClientApp/yarn-error.log*
+ClientApp/package-lock.json
+ClientApp/pnpm-lock.yaml
+ClientApp/yarn.lock
+
+## IDE files
+ClientApp/.idea/
+ClientApp/.vscode/
+ClientApp/.DS_Store
+
+# ======================
+# Global ignores
+# ======================
+
+# OS-specific
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Backup and temp
+*.bak
+*.tmp
+*.temp
+*.old
+*.orig
+*.rej
+*.swp
