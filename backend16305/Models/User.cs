@@ -9,7 +9,7 @@ namespace backend16305.Models
         public required string LastName { get; set; }
         public required string Email { get; set; }
         public required string Phone { get; set; }
-        public DateTime CreatedAt { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
 
         // Navigation property - One User can organize Many Events
         public List<Event> OrganizedEvents { get; set; } = new List<Event>();

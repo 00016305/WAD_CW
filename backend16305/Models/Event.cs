@@ -10,7 +10,7 @@
         public required string Location { get; set; }
         public int MaxAttendees { get; set; }
         public int OrganizerId { get; set; } // Foreign Key
-        public DateTime CreatedAt { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
 
         // Navigation property - Each Event belongs to One User (Organizer)
         public User? Organizer { get; set; }

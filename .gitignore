@@ -43,7 +43,7 @@ local.settings.json
 .dotnet-tools/
 
 # Entity Framework
-Migrations/
+# Migrations/
 
 # ======================
 # Angular (usually in /ClientApp or /Frontend)
