@@ -53,7 +53,6 @@ namespace backend16305.Controllers
         public async Task<IActionResult> UpdateComment([FromRoute] int id, [FromBody] UpdateEventDto updateEventDto)
         {
             var model = await _repo.UpdateAsync(id, updateEventDto);
-            //var stockModel = _context.Stocks.FirstOrDefault(x => x.Id == id);
 
             if (model == null)
             {
