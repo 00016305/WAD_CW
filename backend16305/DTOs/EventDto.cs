@@ -12,6 +12,6 @@ namespace backend16305.DTOs
         public int MaxAttendees { get; set; }
         public DateTime CreatedAt { get; set; }
         public int OrganizerId { get; set; }
-        public User? Organizer { get; set; }
+        //public User? Organizer { get; set; }
     }
 }
