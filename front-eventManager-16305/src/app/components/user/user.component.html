@@ -1,0 +1,41 @@
+<div class="container">
+      <div class="header">
+        <h2>Users Management</h2>
+        <button class="btn btn-primary" routerLink="/users/create">
+          <i class="icon">+</i> Add New User
+        </button>
+      </div>
+
+      <div class="loading" *ngIf="loading">Loading users...</div>
+      <div class="error" *ngIf="error">{{ error }}</div>
+
+      <div class="cards-grid" *ngIf="!loading && !error">
+        <div class="user-card" *ngFor="let user of users">
+          <div class="card-header">
+            <h3>{{ user.firstName }} {{ user.lastName }}</h3>
+            <div class="card-actions">
+              <button class="btn btn-sm btn-secondary" [routerLink]="['/users/edit', user.id]">
+                <i class="icon">✏️</i> Edit
+              </button>
+              <button class="btn btn-sm btn-danger" (click)="deleteUser(user.id!)">
+                <i class="icon">🗑️</i> Delete
+              </button>
+            </div>
+          </div>
+          <div class="card-body">
+            <p><strong>Email:</strong> {{ user.email }}</p>
+            <p><strong>Phone:</strong> {{ user.phone }}</p>
+            <p><strong>Created:</strong> {{ user.createdAt | date:'short' }}</p>
+            <div *ngIf="user.organizedEvents && user.organizedEvents.length > 0">
+              <p><strong>Organized Events:</strong> {{ user.organizedEvents.length }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="empty-state" *ngIf="!loading && !error && users.length === 0">
+        <h3>No users found</h3>
+        <p>Get started by creating your first user!</p>
+        <button class="btn btn-primary" routerLink="/users/create">Add First User</button>
+      </div>
+    </div>
